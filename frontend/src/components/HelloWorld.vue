@@ -1,85 +1,11 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+    <div id="main-typo">
+      <h1 lang="ko">우주기술</h1>
+      <h1 lang="ko">대학생</h1>
+      <h1 lang="ko">창업 아카데미</h1>
+      <h1 lang="en" class="font-color_1">STAR-EXPLORATION</h1>
+    </div>
   </div>
 </template>
 
@@ -96,18 +22,50 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+
+/* for fonts */
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+@font-face {
+  font-family: 'campton-bolddemo';
+  src: url('./../assets/campton-bolddemo-webfont.woff2') format('woff2'),
+  url('./../assets/campton-bolddemo-webfont.woff') format('woff');
   font-weight: normal;
+  font-style: normal;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+:lang(ko) {
+  font-family: 'Noto Sans KR', sans-serif;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+:lang(en) {
+  font-family: 'campton-bolddemo', sans-serif;
 }
-a {
-  color: #42b983;
+
+/* for font-color */
+.font-color_1 {
+  color: #00fcff;
 }
+
+/* for fullscreen */
+.hello {
+  background-image: url("./../assets/bg_space.jpg");
+
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* for main-typo */
+#main-typo {
+  font-size: 48px;
+  font-weight: 800;
+  color: white;
+  padding-left: 50px;
+  padding-top: 50px;
+  line-height: 1.3em;
+}
+
 </style>

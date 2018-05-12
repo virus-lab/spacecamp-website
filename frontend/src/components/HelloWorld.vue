@@ -6,12 +6,19 @@
       <h1 lang="ko">창업 아카데미</h1>
       <h1 lang="en" class="font-color_1">STAR-EXPLORATION</h1>
     </div>
+    <a id="main-reg" href="#" lang="ko" class="sub-font">참가신청하기</a>
     <div id="main-day" class="main-font">
       <h2 id="main-target" class="font-color_1" lang="en">2018. 07. 16</h2>
       <h2 id="main-countdown" lang="en">
         <countdown :time="time" :interval="100">
           <template slot-scope="props">{{ props.days }}:{{ props.hours }}:{{ props.minutes }}:{{ props.seconds.split('.')[0] }}</template>
         </countdown>
+        <div>
+          <p class="countdown-sub">day</p>
+          <p class="countdown-sub">hour</p>
+          <p class="countdown-sub">minute</p>
+          <p class="countdown-sub">second</p>
+        </div>
       </h2>
     </div>
   </div>
@@ -29,9 +36,6 @@ export default {
       counting: false,
       time: newYear - now
     }
-  },
-  mounted () {
-    // this.$refs.countdown.start()
   }
 }
 </script>
@@ -46,6 +50,14 @@ export default {
   font-family: 'campton-bolddemo';
   src: url('./../assets/campton-bolddemo-webfont.woff2') format('woff2'),
   url('./../assets/campton-bolddemo-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'campton-lightdemo';
+  src: url('./../assets/campton-lightdemo-webfont.woff2') format('woff2'),
+  url('./../assets/campton-lightdemo-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -82,6 +94,14 @@ export default {
   line-height: 1.3em;
 }
 
+.sub-font {
+  font-size: 48px;
+  font-weight: 800;
+  color: white;
+  line-height: 1.3em;
+  text-decoration: none;
+}
+
 #main-typo {
   padding-left: 50px;
   padding-top: 50px;
@@ -91,8 +111,7 @@ export default {
   position: absolute;
   bottom: 0px;
   right: 0px;
-  padding-right: 0px;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 #main-target {
@@ -104,4 +123,40 @@ export default {
   width: 400px;
   text-align: justify;
 }
+
+#main-reg {
+  position: absolute;
+  left: 50%;
+  width: 300px;
+  margin-left: -168px;
+  text-align: center;
+  top: 50%;
+  vertical-align: center;
+  padding: 10px;
+  border: 8px solid white;
+}
+
+#main-reg:hover {
+  border: 8px solid #00fcff;
+  color: #00fcff;
+}
+
+.countdown-sub {
+  font-size: 12px;
+  border-top: 1.5px solid #00fcff;
+  width: 70px;
+  text-align: center;
+  height: 30px;
+  line-height: 2.4em;
+  float: left;
+  margin-right: 20px;
+  visibility: hidden;
+  font-family: 'campton-lightdemo', sans-serif;
+  /* visibility: visible; */
+}
+
+#main-countdown:hover .countdown-sub{
+  visibility: visible;
+}
+
 </style>

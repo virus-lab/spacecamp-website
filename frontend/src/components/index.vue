@@ -27,7 +27,7 @@
 <script>
 
 export default {
-  name: 'HelloWorld',
+  name: 'index',
   data () {
     var now = new Date()
     var newYear = new Date(2018, 7, 16)
@@ -152,23 +152,50 @@ export default {
   margin-right: 20px;
   visibility: hidden;
   font-family: 'campton-lightdemo', sans-serif;
-  /* visibility: visible; */
 }
 
 #main-countdown:hover .countdown-sub{
   visibility: visible;
 }
 
-
 @media screen and (max-width: 768px) {
   .main-font {
     font-size: 40px;
   }
+  .sub-font {
+    font-size: 24px;
+  }
   #main-typo {
+    position: absolute;
     padding-left: 0px;
     left: 50%;
-    position: absolute;
     margin-left: -150px;
+  }
+  #main-day {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 270px;
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  #main-reg {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    margin-left: -120px;
+  }
+  .countdown-sub {
+    font-size: 6px;
+    border-top: 1.5px solid #00fcff;
+    width: 48px;
+    text-align: center;
+    height: 30px;
+    line-height: 2.4em;
+    float: left;
+    margin-right: 10px;
+    visibility: hidden;
+    font-family: 'campton-lightdemo', sans-serif;
   }
 }
 
@@ -183,6 +210,5 @@ export default {
     margin-left: -150px;
   }
 }
-
 
 </style>

@@ -159,4 +159,30 @@ export default {
   visibility: visible;
 }
 
+
+@media screen and (max-width: 768px) {
+  .main-font {
+    font-size: 40px;
+  }
+  #main-typo {
+    padding-left: 0px;
+    left: 50%;
+    position: absolute;
+    margin-left: -150px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .main-font {
+    font-size: 30px;
+  }
+  #main-typo {
+    padding-left: 0px;
+    left: 50%;
+    position: absolute;
+    margin-left: -150px;
+  }
+}
+
+
 </style>

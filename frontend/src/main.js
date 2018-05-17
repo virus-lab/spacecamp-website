@@ -4,10 +4,6 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import VueCountdown from '@xkeshi/vue-countdown'
-
-Vue.component('countdown', VueCountdown)
-
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

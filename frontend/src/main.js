@@ -12,9 +12,9 @@ import VueAffix from 'vue-affix'
 
 Vue.config.productionTip = false
 
-Vue.use(BootstrapVue);
+Vue.use(BootstrapVue)
 
-Vue.use(VueAffix);
+Vue.use(VueAffix)
 
 /* eslint-disable no-new */
 new Vue({

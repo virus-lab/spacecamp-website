@@ -10,11 +10,12 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 import VueAffix from 'vue-affix'
 
+import VueCountdown from '@xkeshi/vue-countdown'
+
 Vue.config.productionTip = false
-
 Vue.use(BootstrapVue)
-
 Vue.use(VueAffix)
+Vue.component('countdown', VueCountdown)
 
 /* eslint-disable no-new */
 new Vue({

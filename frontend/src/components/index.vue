@@ -12,6 +12,21 @@
 
       <a id="btn-more" lang="ko" class="font-color_1 font-bold" href="#">더 알아보기</a>
 
+      <div id="main-day" class="main-font">
+        <h1 id="main-target" lang="en" class="font-color_2 font-bold">2018. 07. 16</h1>
+        <h1 id="main-countdown" lang="en" class="font-color_1 font-bold">
+          <countdown :time="time" :interval="100">
+            <template slot-scope="props">{{ props.days }}:{{ props.hours }}:{{ props.minutes }}:{{ props.seconds.split('.')[0] }}</template>
+          </countdown>
+          <div>
+            <p lang="en" class="countdown-sub">day</p>
+            <p lang="en" class="countdown-sub">hour</p>
+            <p lang="en" class="countdown-sub">minute</p>
+            <p lang="en" class="countdown-sub">second</p>
+          </div>
+        </h1>
+      </div>
+
     </b-jumbotron>
 
     <affix id="menu" relative-element-selector="#main-contents" style="width: 100%" :offset="{ top: 56, bottom: 56 }" :scroll-affix="true" v-on:affix="navAttach" v-on:affixtop="navDetach">
@@ -63,8 +78,13 @@
 export default {
   name: 'index',
   data () {
+    var now = new Date()
+    var newYear = new Date(2018, 7, 26)
+
     return {
-      isNavTouch: false
+      isNavTouch: false,
+      counting: false,
+      time: newYear - now
     }
   },
   methods: {
@@ -159,6 +179,60 @@ export default {
 }
 
 /* end fullpage-main */
+
+/* start main-typo */
+
+#main-typo h1:lang(ko) {
+  font-size: 60px;
+  line-height: 1em;
+}
+
+#main-typo h1:lang(en) {
+  font-size: 60px;
+}
+
+/* end main-typo */
+
+/* start main-day */
+
+#main-day {
+  position: absolute;
+  bottom: 30px;
+  right: 0px;
+}
+#main-day h1:lang(en) {
+  font-size: 60px;
+}
+
+.countdown-sub {
+  font-size: 12px;
+  border-top: 1.5px solid #00fcff;
+  width: 70px;
+  text-align: center;
+  height: 30px;
+  line-height: 2.4em;
+  float: left;
+  margin-right: 20px;
+  visibility: hidden;
+  font-family: 'campton-lightdemo', sans-serif;
+}
+
+#main-countdown:hover .countdown-sub{
+  visibility: visible;
+}
+
+
+#main-target {
+  width: 400px;
+  text-align: justify;
+}
+
+#main-countdown {
+  width: 400px;
+  text-align: justify;
+}
+
+/* end main-day */
 
 /* start nav */
 

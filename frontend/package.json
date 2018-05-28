@@ -14,6 +14,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@xkeshi/vue-countdown": "^0.6.0",
     "bootstrap-vue": "^2.0.0-rc.10",
     "vue": "^2.5.2",
     "vue-affix": "^0.2.4",

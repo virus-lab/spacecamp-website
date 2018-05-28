@@ -27,6 +27,15 @@
         </h1>
       </div>
 
+      <div id="main-spacelogo">
+        <img src="./../assets/logo_camp.png" />
+      </div>
+
+      <div id="main-logos">
+        <img src="./../assets/logo_space.png" />
+        <img src="./../assets/logo_virus.png" />
+      </div>
+
     </b-jumbotron>
 
     <affix id="menu" relative-element-selector="#main-contents" style="width: 100%" :offset="{ top: 56, bottom: 56 }" :scroll-affix="true" v-on:affix="navAttach" v-on:affixtop="navDetach">
@@ -120,7 +129,6 @@ export default {
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'campton-lightdemo';
   src: url('./../assets/campton-lightdemo-webfont.woff2') format('woff2'),
@@ -133,7 +141,6 @@ export default {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 800;
 }
-
 .font-bold:lang(en) {
   font-family: 'campton-bolddemo', sans-serif;
 }
@@ -141,7 +148,6 @@ export default {
 .font-color_1 {
   color: white;
 }
-
 .font-color_2 {
   color: #00fcff;
 }
@@ -182,28 +188,59 @@ export default {
 
 /* start main-typo */
 
+#main-typo {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
 #main-typo h1:lang(ko) {
   font-size: 60px;
   line-height: 1em;
 }
-
 #main-typo h1:lang(en) {
   font-size: 60px;
 }
 
 /* end main-typo */
 
+/* start main-logos */
+
+#main-spacelogo {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+}
+#main-spacelogo img {
+  width: 200px;
+}
+
+#main-logos {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+#main-logos img {
+  width: 100px;
+  margin-right: 30px;
+}
+
+/* end main-logos */
+
 /* start main-day */
 
 #main-day {
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;
   right: 0px;
 }
 #main-day h1:lang(en) {
   font-size: 60px;
 }
 
+#main-countdown {
+  width: 400px;
+  text-align: justify;
+}
 .countdown-sub {
   font-size: 12px;
   border-top: 1.5px solid #00fcff;
@@ -216,18 +253,10 @@ export default {
   visibility: hidden;
   font-family: 'campton-lightdemo', sans-serif;
 }
-
 #main-countdown:hover .countdown-sub{
   visibility: visible;
 }
-
-
 #main-target {
-  width: 400px;
-  text-align: justify;
-}
-
-#main-countdown {
   width: 400px;
   text-align: justify;
 }

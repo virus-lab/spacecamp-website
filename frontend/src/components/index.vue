@@ -10,7 +10,19 @@
         <h1 lang="en" class="font-color_2 font-bold">STAR-EXPLORATION</h1>
       </div>
 
-      <a id="btn-more" lang="ko" class="font-color_1 font-bold" href="#">더 알아보기</a>
+      <div id="main-btn">
+        <img class="main-btn-img" src="./../assets/main_btn_arrow.png" />
+        <hr class="hr-blank" />
+        <a id="btn-more" lang="ko" class="font-color_1 font-bold" href="#">참가신청하기</a>
+        <hr class="hr-blank" />
+        <img class="main-btn-img" src="./../assets/main_btn_arrow.png" />
+        <div class="hr-deco">
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+        </div>
+      </div>
 
       <div id="main-day" class="main-font">
         <h1 id="main-target" lang="en" class="font-color_2 font-bold">2018. 07. 16</h1>
@@ -167,24 +179,75 @@ export default {
   background-image: url("./../assets/bg_space.jpg");
 }
 
-#btn-more {
+/* end fullpage-main */
+
+/* start main-btn */
+
+#main-btn {
   position: absolute;
   left: 50%;
-  width: 300px;
-  margin-left: -150px;
-  text-align: center;
   top: 50%;
-  vertical-align: center;
-  padding: 10px;
-  border: 8px solid white;
-  font-size: 36px;
+  margin-left: -150px;
+  margin-top: -60px;
+  width: 100%;
 }
-#btn-more:hover {
-  border: 8px solid #00fcff;
-  color: #00fcff;
+#main-btn .hr-blank {
+  border: none;
 }
 
-/* end fullpage-main */
+#btn-more {
+  vertical-align: center;
+  text-align: center;
+  /* padding: 10px; */
+  font-size: 60px;
+}
+#btn-more:hover {
+  text-decoration: none;
+}
+
+.hr-deco hr {
+  border: 1px solid #00fcff;
+  position: absolute;
+  visibility: hidden;
+}
+.hr-deco hr:nth-child(1) {
+  top: 50%;
+  margin-top: -20px;
+  width: 30%;
+  left: -45%;
+}
+.hr-deco hr:nth-child(2) {
+  top: 50%;
+  margin-top: 0px;
+  left: -30%;
+  width: 25%;
+}
+.hr-deco hr:nth-child(3) {
+  top: 50%;
+  margin-top: 0px;
+  left: 25%;
+  width: 30%;
+}
+.hr-deco hr:nth-child(4) {
+  top: 50%;
+  margin-top: 20px;
+  left: 30%;
+  width: 50%;
+}
+
+.main-btn-img {
+  width: 50px;
+  margin-left: 130px;
+  visibility: hidden;
+}
+#main-btn:hover .main-btn-img {
+  visibility: visible;
+}
+#main-btn:hover .hr-deco hr {
+  visibility: visible;
+}
+
+/* end main-btn */
 
 /* start main-typo */
 
@@ -253,7 +316,7 @@ export default {
   visibility: hidden;
   font-family: 'campton-lightdemo', sans-serif;
 }
-#main-countdown:hover .countdown-sub{
+#main-countdown:hover .countdown-sub {
   visibility: visible;
 }
 #main-target {

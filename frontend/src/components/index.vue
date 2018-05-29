@@ -13,15 +13,15 @@
       <div id="main-btn">
         <img class="main-btn-img" src="./../assets/main_btn_arrow.png" />
         <hr class="hr-blank" />
-        <a id="btn-more" lang="ko" class="font-color_1 font-bold" href="#">참가신청하기</a>
+        <a v-on:mouseover="btnHover" v-on:mouseleave="btnLeave" id="btn-more" lang="ko" class="font-color_1 font-bold" href="#">참가신청하기</a>
         <hr class="hr-blank" />
         <img class="main-btn-img" src="./../assets/main_btn_arrow.png" />
-        <div class="hr-deco">
-          <hr />
-          <hr />
-          <hr />
-          <hr />
-        </div>
+      </div>
+      <div class="hr-deco">
+        <hr v-show="hoverShow" />
+        <hr v-show="hoverShow" />
+        <hr v-show="hoverShow" />
+        <hr v-show="hoverShow" />
       </div>
 
       <div id="main-day" class="main-font">
@@ -105,7 +105,8 @@ export default {
     return {
       isNavTouch: false,
       counting: false,
-      time: newYear - now
+      time: newYear - now,
+      hoverShow: false
     }
   },
   methods: {
@@ -114,6 +115,12 @@ export default {
     },
     navDetach: function (event) {
       this.isNavTouch = false
+    },
+    btnHover: function (event) {
+      this.hoverShow = true
+    },
+    btnLeave: function (event) {
+      this.hoverShow = false
     }
   }
 }
@@ -169,7 +176,9 @@ export default {
 /* start fullpage-main */
 
 .fullpage {
-  margin: 0px;
+  margin: 0;
+  padding: 0;
+  border: none;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -189,7 +198,6 @@ export default {
   top: 50%;
   margin-left: -150px;
   margin-top: -60px;
-  width: 100%;
 }
 #main-btn .hr-blank {
   border: none;
@@ -198,53 +206,44 @@ export default {
 #btn-more {
   vertical-align: center;
   text-align: center;
-  /* padding: 10px; */
   font-size: 60px;
 }
 #btn-more:hover {
   text-decoration: none;
 }
+.main-btn-img {
+  width: 50px;
+  margin-left: 130px;
+}
 
 .hr-deco hr {
   border: 1px solid #00fcff;
   position: absolute;
-  visibility: hidden;
+  width: 100%;
 }
 .hr-deco hr:nth-child(1) {
   top: 50%;
-  margin-top: -20px;
+  margin-top: 30px;
   width: 30%;
-  left: -45%;
+  left: 0%;
 }
 .hr-deco hr:nth-child(2) {
   top: 50%;
-  margin-top: 0px;
-  left: -30%;
-  width: 25%;
+  margin-top: 50px;
+  width: 30%;
+  left: 5%;
 }
 .hr-deco hr:nth-child(3) {
   top: 50%;
-  margin-top: 0px;
-  left: 25%;
+  margin-top: 50px;
   width: 30%;
+  right: 5%;
 }
 .hr-deco hr:nth-child(4) {
   top: 50%;
-  margin-top: 20px;
-  left: 30%;
-  width: 50%;
-}
-
-.main-btn-img {
-  width: 50px;
-  margin-left: 130px;
-  visibility: hidden;
-}
-#main-btn:hover .main-btn-img {
-  visibility: visible;
-}
-#main-btn:hover .hr-deco hr {
-  visibility: visible;
+  margin-top: 70px;
+  width: 30%;
+  right: 0%;
 }
 
 /* end main-btn */

@@ -51,16 +51,23 @@
     </b-jumbotron>
 
     <affix id="menu" relative-element-selector="#main-contents" style="width: 100%" :offset="{ top: 56, bottom: 56 }" :scroll-affix="true" v-on:affix="navAttach" v-on:affixtop="navDetach">
-      <b-navbar toggleable="md" type="dark" variant="info" id="nav" class="stickyed">
+      <b-navbar toggleable="md" id="nav" class="stickyed font-bold" lang="en">
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-        <b-navbar-brand href="#">NavBar</b-navbar-brand>
+        <b-navbar-brand href="#">
+          <img src="./../assets/symbol_neon.png" />
+        </b-navbar-brand>
         <b-collapse is-nav id="nav_collapse">
           <b-navbar-nav>
-            <b-nav-item href="#1">Link</b-nav-item>
-            <b-nav-item href="#2">Link</b-nav-item>
-            <b-nav-item href="#3">Link</b-nav-item>
+            <b-nav-item href="#1">ABOUT</b-nav-item>
+            <b-nav-item href="#1">SCHEDULE</b-nav-item>
+            <b-nav-item href="#1">LOCATION</b-nav-item>
+            <b-nav-item href="#1">APPLICATION</b-nav-item>
+            <b-nav-item href="#1">CONTACTS</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
+        <b-nav-form>
+          <b-button lang="ko" class="my-2 my-sm-0 font-bold" href="#">바로 참가신청하기</b-button>
+        </b-nav-form>
       </b-navbar>
     </affix>
 
@@ -183,6 +190,7 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 0;
 }
 #fullpage-main {
   background-image: url("./../assets/bg_space.jpg");
@@ -331,9 +339,35 @@ export default {
   background-color: white;
   height: 500px;
 }
-
 .active {
   height: 556px;
+}
+
+#nav {
+  background-color: #282828;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 50px;
+}
+#nav img {
+  width: 50px;
+}
+#nav ul li {
+  margin-left: 30px;
+}
+#nav ul li a {
+  font-size: 20px;
+  color: white;
+}
+#nav ul li a:hover {
+  color: #00fcff;
+}
+#nav form a {
+  margin-right: 50px;
+  border: 3px solid #00fcff;
+  background: none;
+  color: #00fcff;
+  border-radius: 0px;
 }
 
 /* end nav */

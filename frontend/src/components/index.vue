@@ -13,7 +13,7 @@
       <div id="main-btn">
         <img class="main-btn-arrow" id="main-btn-arrow_1" src="./../assets/main_btn_arrow.png" />
         <hr class="hr-blank" />
-        <a v-on:mouseover="btnHover" v-on:mouseleave="btnLeave" id="btn-more" lang="ko" class="font-color_1 font-bold" href="#">참가신청하기</a>
+        <a v-on:mouseover="btnHover" v-on:mouseleave="btnLeave" id="btn-more" lang="ko" class="font-color_1 font-bold" href="#main-contents" v-smooth-scroll="{ duration: 1000, offset: -50 }">참가신청하기</a>
         <hr class="hr-blank" />
         <img class="main-btn-arrow" id="main-btn-arrow_2" src="./../assets/main_btn_arrow.png" />
       </div>

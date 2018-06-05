@@ -12,10 +12,13 @@ import VueAffix from 'vue-affix'
 
 import VueCountdown from '@xkeshi/vue-countdown'
 
+import vueSmoothScroll from 'vue-smooth-scroll'
+
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 Vue.use(VueAffix)
 Vue.component('countdown', VueCountdown)
+Vue.use(vueSmoothScroll)
 
 /* eslint-disable no-new */
 new Vue({

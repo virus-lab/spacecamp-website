@@ -83,16 +83,25 @@
           <b-tab title="캠프소개" active>
             <img src="./../assets/symbol_black.png" />
             <h1 class="font-bold" lang="ko">
-              "캠프소개 어쩌구<br/><mark>우리는 어쩌구</mark> 입니다."
+              “2018 우주기술 창업 아카데미란?"
             </h1>
             <p class="font-normal" lang="ko">
-깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔
+최근  “NewSpace”라는 이름으로 항공우주산업이 폭발적으로 주목받고 있습니다. 4차 산업혁명과 우주 기술 발전을 통해, 전세계적으로 다양한 우주 스타트업들이 등장하며 새로운 뉴 스페이스 생태계가 구축되고 있습니다.<br/>
+뉴 스페이스 시대에 직면하여 한국항공우주연구원에서는 우주기술지식을 기반으로 창업 교육을 실시하고, 사업 모델을 수립해 볼 수 있는 캠프를 개최합니다. 본 캠프에서는  우주/창업 산업의 강연과 실습을 통해 기업가 정신을 확립하고, 구체적인 우주 비즈니스 계획을 수립합니다. 총 2회의 기본-심화 캠프를 통해 심도 있는 창업의 전 과정을 경험하며, 시제품을 제작 및 사후 관리까지 진행하여 실제 우주기반 사업화 기회 또한 제공합니다.
             </p>
+            <img class="main-intro-logo" src="./../assets/logo_space_color.png" />
+            <img class="main-intro-logo" src="./../assets/logo_virus_color.png" />
           </b-tab>
           <b-tab title="브랜딩">
-            <br>I'm the second tab content
+            <img class="main-branding" src="./../assets/branding_3.jpg" />
           </b-tab>
         </b-tabs>
+      </b-container>
+
+      <b-container class="container-margin">
+        <template>
+          <vue-event-calendar :events="demoEvents"></vue-event-calendar>
+        </template>
       </b-container>
 
       <b-jumbotron class="fullpage">
@@ -161,6 +170,7 @@
   </div>
 </template>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
 export default {
   name: 'index',
@@ -172,7 +182,104 @@ export default {
       isNavTouch: false,
       counting: false,
       time: newYear - now,
-      hoverShow: false
+      hoverShow: false,
+      demoEvents: [{
+        date: '2018/07/18',
+        title: '집결 및 이동',
+        desc: '08:00 - 11:00',
+        customClass: ''
+      }, {
+        date: '2018/07/18',
+        title: '오리엔테이션',
+        desc: '11:00 - 12:00',
+        customClass: ''
+      }, {
+        date: '2018/07/18',
+        title: '점심식사',
+        desc: '12:00 - 13:00',
+        customClass: ''
+      }, {
+        date: '2018/07/18',
+        title: '아이스브레이킹',
+        desc: '13:00 - 14:00',
+        customClass: ''
+      }, {
+        date: '2018/07/18',
+        title: '벤처캐피털 특강',
+        desc: '14:00 - 16:00',
+        customClass: ''
+      }, {
+        date: '2018/07/18',
+        title: '우주 기술의 역사와 최신 동향',
+        desc: '16:00 - 17:00',
+        customClass: ''
+      }, {
+        date: '2018/07/18',
+        title: '항공우주기술 경영 특강',
+        desc: '17:00 - 18:00',
+        customClass: ''
+      }, {
+        date: '2018/07/18',
+        title: '저녁식사',
+        desc: '18:00 - 19:00',
+        customClass: ''
+      }, {
+        date: '2018/07/18',
+        title: '네트워킹 파티',
+        desc: '19:00 - 22:00',
+        customClass: ''
+      }, {
+        date: '2018/07/19',
+        title: '아침식사',
+        desc: '08:00 - 09:00',
+        customClass: ''
+      }, {
+        date: '2018/07/19',
+        title: '창업 브레인스토밍 & 씽킹',
+        desc: '09:00 - 10:00',
+        customClass: ''
+      }, {
+        date: '2018/07/19',
+        title: '프로젝트 타당성 분석',
+        desc: '10:00 - 12:00',
+        customClass: ''
+      }, {
+        date: '2018/07/19',
+        title: '점심식사',
+        desc: '12:00 - 13:00',
+        customClass: ''
+      }, {
+        date: '2018/07/19',
+        title: '팀별 아이디어 구상',
+        desc: '13:00 - 15:00',
+        customClass: ''
+      }, {
+        date: '2018/07/19',
+        title: '프로젝트 실습',
+        desc: '15:00 - 18:00',
+        customClass: ''
+      }, {
+        date: '2018/07/19',
+        title: '저녁식사',
+        desc: '18:00 - 19:00',
+        customClass: ''
+      }, {
+        date: '2018/07/19',
+        title: '프로젝트 중간발표 A그룹',
+        desc: '19:00 - 20:00',
+        customClass: ''
+      }, {
+        date: '2018/07/19',
+        title: '프로젝트 중간발표 B그룹',
+        desc: '20:00 - 21:00',
+        customClass: ''
+      }, {
+        date: '2018/07/19',
+        title: '팀별 아이디어 점검',
+        desc: '21:00 - 22:00',
+        customClass: ''
+      }
+    ]
     }
   },
   methods: {
@@ -188,6 +295,9 @@ export default {
     btnLeave: function (event) {
       this.hoverShow = false
     }
+  },
+  created: function () {
+    this.$EventCalendar.toDate('2018/07/18')
   }
 }
 </script>
@@ -546,9 +656,11 @@ export default {
 /* end nav */
 
 /* start main-intro */
+
 #main-intro {
-  margin-top: 50px;
-  margin-bottom: 150px;
+  margin-bottom: 300px;
+  height: 800px;
+  background-color: red;
 }
 
 #main-intro ul li {
@@ -593,6 +705,19 @@ export default {
 mark {
   background-color: #00fcff;
   padding: 0;
+}
+
+#main-intro .main-intro-logo {
+  float: right;
+}
+
+#main-intro img.main-intro-logo {
+  height: 300px;
+}
+
+#main-intro .main-branding {
+  margin-top: -60px;
+  width: 100%;
 }
 
 /* end main-intro */

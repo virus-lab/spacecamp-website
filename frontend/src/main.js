@@ -14,11 +14,15 @@ import VueCountdown from '@xkeshi/vue-countdown'
 
 import vueSmoothScroll from 'vue-smooth-scroll'
 
+import 'vue-event-calendar/dist/style.css'
+import vueEventCalendar from 'vue-event-calendar'
+
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 Vue.use(VueAffix)
 Vue.component('countdown', VueCountdown)
 Vue.use(vueSmoothScroll)
+Vue.use(vueEventCalendar, {locale: 'ko'})
 
 /* eslint-disable no-new */
 new Vue({

@@ -50,7 +50,7 @@
 
     </b-jumbotron>
 
-    <affix id="menu" relative-element-selector="#main-contents" style="width: 100%" :offset="{ top: 56, bottom: 56 }" :scroll-affix="true" v-on:affix="navAttach" v-on:affixtop="navDetach">
+    <affix id="menu" relative-element-selector="#main-contents" style="width: 100%" :offset="{ top: 80, bottom: 80 }" :scroll-affix="true" v-on:affix="navAttach" v-on:affixtop="navDetach">
       <b-navbar toggleable="md" id="nav" class="stickyed font-bold" lang="en">
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
         <b-navbar-brand href="#">
@@ -76,6 +76,46 @@
       <div v-bind:class="[{ active: isNavTouch }]" class="noactive">
       </div>
 
+      <b-jumbotron class="fullpage">
+        <p>For more information visit website</p>
+        <b-btn variant="primary" href="#">More Info</b-btn>
+      </b-jumbotron>
+      <b-jumbotron class="fullpage">
+        <p>For more information visit website</p>
+        <b-btn variant="primary" href="#">More Info</b-btn>
+      </b-jumbotron>
+      <b-jumbotron class="fullpage">
+        <p>For more information visit website</p>
+        <b-btn variant="primary" href="#">More Info</b-btn>
+      </b-jumbotron>
+      <b-jumbotron class="fullpage">
+        <p>For more information visit website</p>
+        <b-btn variant="primary" href="#">More Info</b-btn>
+      </b-jumbotron>
+      <b-jumbotron class="fullpage">
+        <p>For more information visit website</p>
+        <b-btn variant="primary" href="#">More Info</b-btn>
+      </b-jumbotron>
+      <b-jumbotron class="fullpage">
+        <p>For more information visit website</p>
+        <b-btn variant="primary" href="#">More Info</b-btn>
+      </b-jumbotron>
+      <b-jumbotron class="fullpage">
+        <p>For more information visit website</p>
+        <b-btn variant="primary" href="#">More Info</b-btn>
+      </b-jumbotron>
+      <b-jumbotron class="fullpage">
+        <p>For more information visit website</p>
+        <b-btn variant="primary" href="#">More Info</b-btn>
+      </b-jumbotron>
+      <b-jumbotron class="fullpage">
+        <p>For more information visit website</p>
+        <b-btn variant="primary" href="#">More Info</b-btn>
+      </b-jumbotron>
+      <b-jumbotron class="fullpage">
+        <p>For more information visit website</p>
+        <b-btn variant="primary" href="#">More Info</b-btn>
+      </b-jumbotron>
       <b-jumbotron class="fullpage">
         <p>For more information visit website</p>
         <b-btn variant="primary" href="#">More Info</b-btn>
@@ -348,6 +388,7 @@ export default {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 50px;
+  height: 80px;
 }
 #nav img {
   width: 50px;
@@ -373,7 +414,7 @@ export default {
 /* end nav */
 
 #main-contents {
-  padding-top: 50px;
+  /* padding-top: 50px; */
 }
 
 </style>

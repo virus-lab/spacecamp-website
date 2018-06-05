@@ -11,11 +11,11 @@
       </div>
 
       <div id="main-btn">
-        <img class="main-btn-img" src="./../assets/main_btn_arrow.png" />
+        <img class="main-btn-arrow" id="main-btn-arrow_1" src="./../assets/main_btn_arrow.png" />
         <hr class="hr-blank" />
         <a v-on:mouseover="btnHover" v-on:mouseleave="btnLeave" id="btn-more" lang="ko" class="font-color_1 font-bold" href="#">참가신청하기</a>
         <hr class="hr-blank" />
-        <img class="main-btn-img" src="./../assets/main_btn_arrow.png" />
+        <img class="main-btn-arrow" id="main-btn-arrow_2" src="./../assets/main_btn_arrow.png" />
       </div>
       <div class="hr-deco">
         <hr v-show="hoverShow" />
@@ -269,6 +269,8 @@ export default {
   top: 50%;
   margin-left: -150px;
   margin-top: -60px;
+  animation: anim_arrow-btn 0.5s infinite alternate;
+  -webkit-animation: anim_arrow-btn 0.5s infinite alternate;
 }
 #main-btn .hr-blank {
   border: none;
@@ -281,11 +283,34 @@ export default {
 }
 #btn-more:hover {
   text-decoration: none;
-  color: #00fcff;
+  color: white;
 }
-.main-btn-img {
+
+.main-btn-arrow {
   width: 50px;
   margin-left: 130px;
+}
+
+#main-btn-arrow_1 {
+  animation: anim_arrow-1 0.5s infinite alternate;
+  -webkit-animation: anim_arrow-1 0.5s infinite alternate;
+}
+#main-btn-arrow_2 {
+  animation: anim_arrow-2 0.5s infinite alternate;
+  -webkit-animation: anim_arrow-2 0.5s infinite alternate;
+}
+
+@keyframes anim_arrow-btn {
+  0% { margin-top: -60px;}
+  100% { margin-top: -70px;}
+}
+@keyframes anim_arrow-1 {
+  0% { margin-bottom: 0px;}
+  100% { margin-bottom: 10px;}
+}
+@keyframes anim_arrow-2 {
+  0% { margin-top: 10px;}
+  100% { margin-top: 0px;}
 }
 
 .hr-deco hr {
@@ -298,24 +323,57 @@ export default {
   margin-top: 30px;
   width: 30%;
   left: 0%;
+  animation: hr-deco-1 0.5s;
+  -webkit-animation: hr-deco-1 0.5s;
 }
 .hr-deco hr:nth-child(2) {
   top: 50%;
   margin-top: 50px;
   width: 30%;
   left: 5%;
+  animation: hr-deco-2 0.5s;
+  -webkit-animation: hr-deco-2 0.5s;
 }
 .hr-deco hr:nth-child(3) {
   top: 50%;
   margin-top: 50px;
   width: 30%;
   right: 5%;
+  animation: hr-deco-3 0.5s;
+  -webkit-animation: hr-deco-3 0.5s;
 }
 .hr-deco hr:nth-child(4) {
   top: 50%;
   margin-top: 70px;
   width: 30%;
   right: 0%;
+  animation: hr-deco-4 0.5s;
+  -webkit-animation: hr-deco-4 0.5s;
+}
+
+@keyframes hr-deco-1 {
+  0% { width: 0%;}
+  100% { width: 30%;}
+}
+@keyframes hr-deco-2 {
+  0% { width: 0%;}
+  100% { width: 30%;}
+}
+@keyframes hr-deco-3 {
+  0% { width: 0%;}
+  100% { width: 30%;}
+}
+@keyframes hr-deco-4 {
+  0% { width: 0%;}
+  100% { width: 30%;}
+}
+
+/* for responsive */
+/* for phone */
+@media screen and (max-width: 768px) {
+  #btn-more {
+    font-size: 36px;
+  }
 }
 
 /* end main-btn */
@@ -333,6 +391,17 @@ export default {
 }
 #main-typo h1:lang(en) {
   font-size: 60px;
+}
+
+/* for responsive */
+/* for phone */
+@media screen and (max-width: 768px) {
+  #main-typo h1:lang(ko) {
+    font-size: 36px;
+  }
+  #main-typo h1:lang(en) {
+    font-size: 36px;
+  }
 }
 
 /* end main-typo */
@@ -356,6 +425,17 @@ export default {
 #main-logos img {
   width: 100px;
   margin-right: 30px;
+}
+
+/* for responsive */
+/* for phone */
+@media screen and (max-width: 768px) {
+  #main-spacelogo img {
+    width: 50px;
+  }
+  #main-logos img {
+    width: 50px;
+  }
 }
 
 /* end main-logos */
@@ -393,6 +473,30 @@ export default {
 #main-target {
   width: 400px;
   text-align: justify;
+}
+
+/* for responsive */
+/* for phone */
+@media screen and (max-width: 768px) {
+  #main-day {
+    bottom: 5px;
+  }
+  #main-day h1:lang(en) {
+    font-size: 36px;
+  }
+  #main-countdown {
+    width: 240px;
+  }
+  #main-target {
+    width: 240px;
+  }
+  .countdown-sub {
+    width: 40px;
+    margin-right: 12px;
+  }
+  .countdown-sub:last-child {
+    margin-right: 0px;
+  }
 }
 
 /* end main-day */
@@ -472,7 +576,7 @@ export default {
 
 #main-intro ul li a.active {
   height: auto;
-  border-bottom: 3px solid #282828;
+  border-bottom: 3px solid #00fcff;
 }
 
 #main-intro img {

@@ -81,7 +81,13 @@
       <b-container id="main-intro" class="container-margin">
         <b-tabs>
           <b-tab title="캠프소개" active>
-            <br>I'm the first fading tab
+            <img src="./../assets/symbol_black.png" />
+            <h1 class="font-bold" lang="ko">
+              "캠프소개 어쩌구<br/><mark>우리는 어쩌구</mark> 입니다."
+            </h1>
+            <p class="font-normal" lang="ko">
+깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔깔
+            </p>
           </b-tab>
           <b-tab title="브랜딩">
             <br>I'm the second tab content
@@ -223,6 +229,10 @@ export default {
 .font-bold:lang(en) {
   font-family: 'campton-bolddemo', sans-serif;
 }
+.font-normal:lang(ko) {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+}
 
 .font-color_1 {
   color: white;
@@ -271,6 +281,7 @@ export default {
 }
 #btn-more:hover {
   text-decoration: none;
+  color: #00fcff;
 }
 .main-btn-img {
   width: 50px;
@@ -439,6 +450,7 @@ export default {
 #main-intro ul li {
   width: 50%;
   height: 50px;
+  text-align: center;
 }
 
 #main-intro ul li a {
@@ -451,12 +463,32 @@ export default {
 
 #main-intro ul li a {
   height: auto;
-  border-bottom: 1px solid blue;
+  border-bottom: none;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 800;
+  color: black;
+  /* border-bottom: 3px solid #282828; */
 }
 
 #main-intro ul li a.active {
   height: auto;
-  border-bottom: 1px solid red;
+  border-bottom: 3px solid #282828;
+}
+
+#main-intro img {
+  width: 300px;
+  float: left;
+  margin-left: 50px;
+  margin-right: 100px;
+}
+
+#main-intro .tab-content {
+  margin-top: 50px;
+}
+
+mark {
+  background-color: #00fcff;
+  padding: 0;
 }
 
 /* end main-intro */

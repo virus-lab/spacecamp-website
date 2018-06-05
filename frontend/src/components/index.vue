@@ -51,30 +51,43 @@
     </b-jumbotron>
 
     <affix id="menu" relative-element-selector="#main-contents" style="width: 100%" :offset="{ top: 80, bottom: 80 }" :scroll-affix="true" v-on:affix="navAttach" v-on:affixtop="navDetach">
-      <b-navbar toggleable="md" id="nav" class="stickyed font-bold" lang="en">
-        <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-        <b-navbar-brand href="#">
-          <img src="./../assets/symbol_neon.png" />
-        </b-navbar-brand>
-        <b-collapse is-nav id="nav_collapse">
-          <b-navbar-nav>
-            <b-nav-item href="#1">ABOUT</b-nav-item>
-            <b-nav-item href="#1">SCHEDULE</b-nav-item>
-            <b-nav-item href="#1">LOCATION</b-nav-item>
-            <b-nav-item href="#1">APPLICATION</b-nav-item>
-            <b-nav-item href="#1">CONTACTS</b-nav-item>
-          </b-navbar-nav>
-        </b-collapse>
-        <b-nav-form>
-          <b-button lang="ko" class="my-2 my-sm-0 font-bold" href="#">바로 참가신청하기</b-button>
-        </b-nav-form>
-      </b-navbar>
+      <b-container>
+        <b-navbar toggleable="md" id="nav" class="stickyed font-bold" lang="en">
+          <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+          <b-navbar-brand href="#">
+            <img src="./../assets/symbol_neon.png" />
+          </b-navbar-brand>
+          <b-collapse is-nav id="nav_collapse">
+            <b-navbar-nav>
+              <b-nav-item href="#1">ABOUT</b-nav-item>
+              <b-nav-item href="#1">SCHEDULE</b-nav-item>
+              <b-nav-item href="#1">LOCATION</b-nav-item>
+              <b-nav-item href="#1">APPLICATION</b-nav-item>
+              <b-nav-item href="#1">CONTACTS</b-nav-item>
+            </b-navbar-nav>
+          </b-collapse>
+          <b-nav-form>
+            <b-button lang="ko" class="my-2 my-sm-0 font-bold" href="#">바로 참가신청하기</b-button>
+          </b-nav-form>
+        </b-navbar>
+      </b-container>
     </affix>
 
     <div id="main-contents">
 
       <div v-bind:class="[{ active: isNavTouch }]" class="noactive">
       </div>
+
+      <b-container id="main-intro" class="container-margin">
+        <b-tabs>
+          <b-tab title="캠프소개" active>
+            <br>I'm the first fading tab
+          </b-tab>
+          <b-tab title="브랜딩">
+            <br>I'm the second tab content
+          </b-tab>
+        </b-tabs>
+      </b-container>
 
       <b-jumbotron class="fullpage">
         <p>For more information visit website</p>
@@ -174,7 +187,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 
 /* start default */
 
@@ -377,10 +390,10 @@ export default {
 
 .noactive {
   background-color: white;
-  height: 500px;
+  height: 100px;
 }
 .active {
-  height: 556px;
+  height: 180px;
 }
 
 #nav {
@@ -411,10 +424,41 @@ export default {
   border-radius: 0px;
 }
 
+#menu {
+  background-color: #282828;
+}
+
 /* end nav */
 
-#main-contents {
-  /* padding-top: 50px; */
+/* start main-intro */
+#main-intro {
+  margin-top: 50px;
+  margin-bottom: 150px;
 }
+
+#main-intro ul li {
+  width: 50%;
+  height: 50px;
+}
+
+#main-intro ul li a {
+  border: none;
+}
+
+.nav-tabs {
+  border: none;
+}
+
+#main-intro ul li a {
+  height: auto;
+  border-bottom: 1px solid blue;
+}
+
+#main-intro ul li a.active {
+  height: auto;
+  border-bottom: 1px solid red;
+}
+
+/* end main-intro */
 
 </style>

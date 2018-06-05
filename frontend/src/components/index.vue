@@ -80,20 +80,27 @@
 
       <b-container id="main-intro" class="container-margin">
         <b-tabs>
-          <b-tab title="캠프소개" active>
-            <img src="./../assets/symbol_black.png" />
+          <b-tab id="main-intro-tab1" title="캠프소개" active>
+            <img id="main-intro-symbol" src="./../assets/symbol_black.png" />
             <h1 class="font-bold" lang="ko">
               “2018 우주기술 창업 아카데미란?"
             </h1>
             <p class="font-normal" lang="ko">
-최근  “NewSpace”라는 이름으로 항공우주산업이 폭발적으로 주목받고 있습니다. 4차 산업혁명과 우주 기술 발전을 통해, 전세계적으로 다양한 우주 스타트업들이 등장하며 새로운 뉴 스페이스 생태계가 구축되고 있습니다.<br/>
+최근  “NewSpace”라는 이름으로 항공우주산업이 폭발적으로 주목받고 있습니다. 4차 산업혁명과 우주 기술 발전을 통해, 전세계적으로 다양한 우주 스타트업들이 등장하며 새로운 뉴 스페이스 생태계가 구축되고 있습니다.
+            </p>
+            <p class="font-normal" lang="ko">
 뉴 스페이스 시대에 직면하여 한국항공우주연구원에서는 우주기술지식을 기반으로 창업 교육을 실시하고, 사업 모델을 수립해 볼 수 있는 캠프를 개최합니다. 본 캠프에서는  우주/창업 산업의 강연과 실습을 통해 기업가 정신을 확립하고, 구체적인 우주 비즈니스 계획을 수립합니다. 총 2회의 기본-심화 캠프를 통해 심도 있는 창업의 전 과정을 경험하며, 시제품을 제작 및 사후 관리까지 진행하여 실제 우주기반 사업화 기회 또한 제공합니다.
             </p>
-            <img class="main-intro-logo" src="./../assets/logo_space_color.png" />
-            <img class="main-intro-logo" src="./../assets/logo_virus_color.png" />
+            <a href="https://www.kari.re.kr/">
+              <img href="" class="main-intro-logo" id="main-intro-logo-1" src="./../assets/logo_space_color.png" />
+            </a>
+            <a href="http://virus.network">
+              <img class="main-intro-logo" id="main-intro-logo-2" src="./../assets/logo_virus_color.png" />
+            </a>
           </b-tab>
           <b-tab title="브랜딩">
             <img class="main-branding" src="./../assets/branding_3.jpg" />
+            <button class="font-bold" lang="ko">브랜딩 전체 다운로드(pdf)</button>
           </b-tab>
         </b-tabs>
       </b-container>
@@ -658,9 +665,8 @@ export default {
 /* start main-intro */
 
 #main-intro {
-  margin-bottom: 300px;
   height: 800px;
-  background-color: red;
+  margin-bottom: 200px;
 }
 
 #main-intro ul li {
@@ -668,38 +674,30 @@ export default {
   height: 50px;
   text-align: center;
 }
-
 #main-intro ul li a {
   border: none;
+  height: auto;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 800;
+  color: black;
+}
+#main-intro ul li a.active {
+  height: auto;
+  border-bottom: 3px solid #00fcff;
 }
 
 .nav-tabs {
   border: none;
 }
 
-#main-intro ul li a {
-  height: auto;
-  border-bottom: none;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 800;
-  color: black;
-  /* border-bottom: 3px solid #282828; */
-}
-
-#main-intro ul li a.active {
-  height: auto;
-  border-bottom: 3px solid #00fcff;
-}
-
-#main-intro img {
-  width: 300px;
+#main-intro-symbol {
+  width: 350px;
   float: left;
   margin-left: 50px;
   margin-right: 100px;
 }
 
 #main-intro .tab-content {
-  margin-top: 50px;
 }
 
 mark {
@@ -709,17 +707,49 @@ mark {
 
 #main-intro .main-intro-logo {
   float: right;
+  margin-top: 50px;
 }
 
-#main-intro img.main-intro-logo {
-  height: 300px;
+#main-intro #main-intro-logo-1 {
+  /* KARI */
+  height: 60px;
+  margin-right: 10px;
+}
+
+#main-intro #main-intro-logo-2 {
+  /* VIRUS */
+  height: 30px;
+  margin-right: 50px;
+  margin-top: 80px;
 }
 
 #main-intro .main-branding {
-  margin-top: -60px;
   width: 100%;
+  padding: none;
 }
 
+#main-intro-tab1 {
+  margin-top: 120px;
+}
+#main-intro-tab1 h1 {
+  margin-bottom: 30px;
+}
+#main-intro-tab1 p {
+  line-height: 1.8em;
+  margin-bottom: 10px;
+}
+
+#main-intro button {
+  float: right;
+  width: 200px;
+  height: 50px;
+  border: 5px solid #00fcff;
+  text-align: center;
+  padding-bottom: 1px;
+}
+#main-intro button:hover {
+  background-color: #00fcff;
+}
 /* end main-intro */
 
 </style>

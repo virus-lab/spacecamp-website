@@ -59,7 +59,7 @@
           </b-navbar-brand>
           <b-collapse is-nav id="nav_collapse">
             <b-navbar-nav>
-              <b-nav-item href="#1">ABOUT</b-nav-item>
+              <a href="#main-contents" v-smooth-scroll="{ duration: 1000, offset: -50 }">ABOUT</a>
               <b-nav-item href="#1">SCHEDULE</b-nav-item>
               <b-nav-item href="#1">LOCATION</b-nav-item>
               <b-nav-item href="#1">APPLICATION</b-nav-item>
@@ -100,7 +100,7 @@
           </b-tab>
           <b-tab title="브랜딩">
             <img class="main-branding" src="./../assets/branding_3.jpg" />
-            <button class="font-bold" lang="ko">브랜딩 전체 다운로드(pdf)</button>
+            <a class="font-bold" lang="ko" href="./../download/STAR-EXPLORATION-branding_VIRUS.pdf" download>브랜딩 전체 다운로드(pdf)</a>
           </b-tab>
         </b-tabs>
       </b-container>
